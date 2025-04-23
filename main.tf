@@ -27,6 +27,15 @@ provider "aws" {
   region = "us-west-2"
 }
 
+
+resource "aws_s3_bucket" "example" {
+  bucket = "terraform-gh-actions-example-10000"
+
+  tags = {
+    Name        = "My bucket"
+    Environment = "Dev"
+  }
+}
 # resource "random_pet" "sg" {}
 
 # data "aws_ami" "ubuntu" {
