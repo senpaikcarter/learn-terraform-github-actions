@@ -36,6 +36,15 @@ resource "aws_s3_bucket" "example" {
     Environment = "Dev"
   }
 }
+
+resource "aws_s3_bucket" "example2" {
+  bucket = "terraform-gh-actions-example-10001"
+
+  tags = {
+    Name        = "My bucket"
+    Environment = "Dev"
+  }
+}
 # resource "random_pet" "sg" {}
 
 # data "aws_ami" "ubuntu" {
